@@ -33,7 +33,7 @@ export default {
 			thumbnail: { url: `https://cdn.discordapp.com/avatars/${user.id}/${user.icon_hash}.png?size=256` },
 			description: `
 @${user.username} (${user.id})
-Bot: ${user.bot ? '❌' : '✅'}`.trim()
+Bot: ${user.bot ? '✅' : '❌'}`.trim()
 		}
 
 		if (joinedTimestamp) {
