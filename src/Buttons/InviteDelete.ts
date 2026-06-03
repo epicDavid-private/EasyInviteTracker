@@ -58,7 +58,7 @@ __This cannot be undone!__
 		await interaction.deferUpdate();
 
 		try {
-			await client.rest.delete(Routes.invite(invite.code),  { reason: `Deleted by @${interaction.user.username})` })
+			await client.rest.delete(Routes.invite(invite.code),  { reason: `Deleted by @${interaction.user.username} (${interaction.user.id})` })
 		} catch (error) {
 			Log('ERROR', error);
 			await interaction.editReply({
