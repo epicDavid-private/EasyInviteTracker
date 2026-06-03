@@ -1,12 +1,11 @@
 import {EventHandler} from "../Typings/HandlerTypes";
-import {Invite} from "discord.js";
 import { client } from "../Client";
+import {AuditLogEvent, Invite} from "discord.js";
 import {DiscardInvite, GetInvite} from "../CRUD/Invites";
 import {SendLog} from "../Utils/Logs/SendLog";
 import {Log} from "../Utils/Log";
 import {GetUser, SaveUser} from "../CRUD/Users";
 import {COLOR, INVITE_PURGE_REASON} from "../Utils/Constants";
-import {AuditLogEvent} from "discord-api-types/v10";
 import {SyncInvitesForGuild} from "../Utils/SyncInvites";
 import {ParseUser} from "../Utils/Parsers";
 import {SimpleUser} from "../Typings/DatabaseTypes";
