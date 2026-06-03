@@ -1,5 +1,5 @@
 import {EventHandler} from "../Typings/HandlerTypes";
-import { client, IClient } from "../Client";
+import {client} from "../Client";
 import {Invite} from "discord.js";
 import {SaveInvite} from "../CRUD/Invites";
 import {SendLog} from "../Utils/Logs/SendLog";
