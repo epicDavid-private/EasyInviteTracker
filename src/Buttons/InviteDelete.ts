@@ -1,7 +1,6 @@
 import {ButtonHandler} from "../Typings/HandlerTypes";
 import {COLOR, EMOJI} from "../Utils/Constants";
 import {DiscardInvite, GetInvite} from "../CRUD/Invites";
-import {Routes} from "discord-api-types/v10";
 import {Log} from "../Utils/Log";
 import {CheckPermissions} from "../Utils/CheckPermissions";
 
@@ -67,7 +66,8 @@ __This cannot be undone!__
 				embeds: [{
 					color: COLOR.ERROR,
 					description: `Something went wrong :(\nMake sure I have the required permissions`
-				}]
+				}],
+				components: []
 			});
 			return;
 		}
@@ -78,7 +78,8 @@ __This cannot be undone!__
 			embeds: [{
 				color: COLOR.PRIMARY,
 				description: `${EMOJI.CANCEL} Invite successfully deleted`
-			}]
+			}],
+			components: []
 		});
 	}
 } satisfies ButtonHandler as ButtonHandler;
