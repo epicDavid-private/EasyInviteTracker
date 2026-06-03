@@ -9,10 +9,11 @@ import {SendLog} from "../Utils/Logs/SendLog";
 import {GetUser, SaveMember} from "../CRUD/Users";
 import {GetGuild} from "../CRUD/Guild";
 import config from "../config";
+import { client } from "../Client";
 
 export default {
 	name   : 'guildMemberAdd',
-	execute: async (client, member: GuildMember): Promise<void> => {
+	execute: async (member: GuildMember): Promise<void> => {
 		const guild = member.guild;
 
 		SaveMember(guild, member);

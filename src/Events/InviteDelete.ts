@@ -1,6 +1,6 @@
 import {EventHandler} from "../Typings/HandlerTypes";
-import {IClient} from "../Client";
 import {Invite} from "discord.js";
+import { client } from "../Client";
 import {DiscardInvite, GetInvite} from "../CRUD/Invites";
 import {SendLog} from "../Utils/Logs/SendLog";
 import {Log} from "../Utils/Log";
@@ -13,7 +13,7 @@ import {SimpleUser} from "../Typings/DatabaseTypes";
 
 export default {
 	name: 'inviteDelete',
-	execute: async (client: IClient, invite: Invite): Promise<void> => {
+	execute: async (invite: Invite): Promise<void> => {
 		if (!invite.guild) return Log('ERROR', invite);
 
 		const guild = client.guilds.cache.get(invite.guild.id)!;

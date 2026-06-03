@@ -6,7 +6,7 @@ import {Database} from "../Database";
 
 export default {
 	name   : 'guildMemberRemove',
-	execute: async function (client, member: GuildMember): Promise<void> {
+	execute: async function (member: GuildMember): Promise<void> {
 		const guild = member.guild;
 		SaveGuild(guild);
 		SaveMember(guild, member);

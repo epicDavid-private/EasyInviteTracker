@@ -2,10 +2,11 @@ import { EventHandler } from "../../Typings/HandlerTypes";
 import { SelectMenuInteraction } from "discord.js";
 import { COLOR } from "../../Utils/Constants";
 import { Log } from "../../Utils/Log";
+import { client } from "../../Client";
 
 export default {
 	name: 'menu-interaction',
-	execute: async (client, interaction: SelectMenuInteraction) => {
+	execute: async (interaction: SelectMenuInteraction) => {
 
 		const args = interaction.customId.split('_');
 		const customId = args.shift()!;

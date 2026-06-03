@@ -1,10 +1,11 @@
 import {EventHandler} from "../../Typings/HandlerTypes";
 import {Log} from "../../Utils/Log";
 import {Interaction} from "discord.js";
+import { client } from "../../Client";
 
 export default {
 	name: 'interactionCreate',
-	execute: async function (client, interaction: Interaction) {
+	execute: async function (interaction: Interaction) {
 		switch (interaction.type) {
 			case 4: // Autocomplete
 			case 2: // Slash Commands + Context Menus

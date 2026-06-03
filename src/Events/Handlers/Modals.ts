@@ -2,10 +2,11 @@ import { EventHandler } from "../../Typings/HandlerTypes";
 import { ModalSubmitInteraction } from "discord.js";
 import { COLOR } from "../../Utils/Constants";
 import { Log } from "../../Utils/Log";
+import { client } from "../../Client";
 
 export default {
 	name: 'modal-interaction',
-	execute: async (client, interaction: ModalSubmitInteraction) => {
+	execute: async (interaction: ModalSubmitInteraction) => {
 
 		const args = interaction.customId.split('_');
 		const customId = args.shift()!;

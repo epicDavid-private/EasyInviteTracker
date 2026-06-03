@@ -2,10 +2,11 @@ import { EventHandler } from "../../Typings/HandlerTypes";
 import { ButtonInteraction } from "discord.js";
 import { COLOR } from "../../Utils/Constants";
 import { Log } from "../../Utils/Log";
+import { client } from "../../Client";
 
 export default {
 	name: 'button-interaction',
-	execute: async (client,interaction: ButtonInteraction) => {
+	execute: async (interaction: ButtonInteraction) => {
 
 		const args = interaction.customId.split('_');
 		const customId = args.shift()!;

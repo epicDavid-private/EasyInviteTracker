@@ -17,6 +17,14 @@ const CHANGELOG: Record<string, {date: string, changes: string[]}> = {
 			"Fixed an index out of bounds error on invite listing",
 			"Fixed deletion logs to show the responsible user when using the delete button",
 		]
+	},
+	"4.0.0": {
+		date: "2026 June 3rd",
+		changes: [
+			"Complete overhaul under the hood",
+			"Delete an invite now makes the event display the user instead of \"Deleted by EIT\"",
+			"Updated log colors to be less confusing",
+		]
 	}
 }
 

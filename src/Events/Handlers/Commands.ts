@@ -2,10 +2,11 @@ import { EventHandler } from "../../Typings/HandlerTypes";
 import { AutocompleteInteraction, ChatInputCommandInteraction as CommandInteraction } from "discord.js";
 import { COLOR } from "../../Utils/Constants";
 import { Log } from "../../Utils/Log";
+import { client } from "../../Client";
 
 export default {
 	name: 'command-interaction',
-	execute: async (client, interaction: CommandInteraction | AutocompleteInteraction) => {
+	execute: async (interaction: CommandInteraction | AutocompleteInteraction) => {
 		const handler = client.commands.get(interaction.commandName);
 		if (!handler) {
 			Log('ERROR', 'Command not found');
