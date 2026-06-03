@@ -1,4 +1,3 @@
-
 const preloadStart = process.hrtime.bigint();
 
 import "source-map-support/register";
@@ -12,14 +11,14 @@ import { client } from './Client';
 import { SyncInvitesForGuild } from "./Utils/SyncInvites";
 import { SyncMembersForGuild } from "./Utils/SyncMemers";
 
-const preloadEnd = process.hrtime.bigint();
-const preloadTime = Number(preloadEnd - preloadStart) / 1e6;
-Log('DEBUG', `Preload time: ${~~preloadTime}ms`);
-
 import * as Commands from "./Commands";
 import * as Buttons from "./Buttons";
 import * as Menus from "./Menus";
 import * as Events from "./Events";
+
+const preloadEnd = process.hrtime.bigint();
+const preloadTime = Number(preloadEnd - preloadStart) / 1e6;
+Log('DEBUG', `Preload time: ${~~preloadTime}ms`);
 
 for (const command of Object.values(Commands)) {
 	client.commands.set(command.data.name, command);

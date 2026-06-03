@@ -34,5 +34,5 @@ export interface ModalHandler {
 export interface EventHandler {
 	name: string;
 	once?: boolean;
-	execute: (client: IClient, ... args: unknown[]) => Promise<unknown>;
+	execute: (... args: unknown[]) => Promise<unknown>;
 }
