@@ -24,6 +24,9 @@ const CHANGELOG: Record<string, {date: string, changes: string[]}> = {
 			"Complete overhaul under the hood",
 			"Delete an invite now makes the event display the user instead of \"Deleted by EIT\"",
 			"Updated log colors to be less confusing",
+			"Fixed a bug showing every user as a bot",
+			"Fixed a small memory leak",
+			"Delete invite button now disappears after user"
 		]
 	}
 }
